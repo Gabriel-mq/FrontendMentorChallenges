@@ -1,0 +1,202 @@
+body{
+    background-color: hsl(257,40%,49%);
+}
+
+
+/*Desktop*/
+
+
+.header{
+    background-image: url("/huddle/assets/bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* background-color: red; */
+    width:92vw;
+    height:100vh;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.hero__container{
+    margin-left:5%;
+}
+
+.hero__logo-container{
+    width:100%;
+}
+
+.hero__logo{
+    width:18%;
+    height:9.5rem;
+    margin-bottom:.2rem;
+}
+
+.hero__mockNtext-container{
+    display:flex;
+    width:100%;
+}
+
+.hero__mockup{
+    width:57%;
+    height:415px;
+}
+
+.hero__text-container > *{
+    color:rgb(241, 236, 236);
+    margin-left:3.5rem;
+}
+
+.hero__title{
+    font-family: 'Poppins',sans serif;
+    line-height: 3.5rem;
+}
+
+.hero__title::before{
+    content:"Build The Community\A"
+            "Your Fans Will Love";
+    white-space: pre;
+}
+
+.hero__p{
+    font-family: 'Open Sans',sans serif;
+    line-height: 1.5rem;
+}
+
+.hero__p::before{
+    content:"huddle re-imagines the way we build communities. You have\A"
+    "a voice, but so does your audience. Create connections with\A"
+    "your users as you engage in genuine discussion";
+    white-space:pre;
+}
+
+.hero__register{
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 2rem;
+    font-size:1rem;
+    padding:1rem 3rem;
+    background-color: #fff;
+    color:hsl(257,40%,49%);
+    outline: none;
+    border:none;
+}
+
+.hero__register:hover{
+    background-color: hsl(300, 69%, 71%);
+    color:#fff;
+    cursor:pointer;
+}
+
+.hero__icons-container{
+    text-align: end;
+}
+
+.hero__icons-container > a > *{
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding:.4rem;
+    width:1.7rem;
+    color:#fff;
+    font-size:1rem;
+}
+
+.hero__icons-container > a > *:hover{
+    color:hsl(300, 69%, 71%);
+    border:1px solid hsl(300, 69%, 71%);
+}
+
+
+
+/*Mobile*/
+
+
+@media screen and (max-width:450px){
+    .header{
+        background-image: url("/huddle/assets/bg-mobile.svg");
+        background-size:contain;
+        /* background-color: red; */
+        width:100vw;
+        height:100vh;
+        display:flex;
+        flex-wrap: wrap;
+    }
+
+    .hero__logo-container{
+        width:100%;
+    }
+    
+    .hero__logo{
+        width:40%;
+        height:6.5rem;
+    }
+    
+    .hero__mockNtext-container{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width:100%;
+    }
+
+    .hero__mockup{
+        width:84%;
+        height:220px;
+        margin-top:.5rem;
+        margin-right:1.1rem;
+    }
+
+    .hero__text-container > *{
+        margin-left:0;
+        text-align: center;
+    }
+
+    .hero__title{
+        font-size:1.5rem;
+        line-height: 2rem;
+        margin-top:22%;
+    }
+
+    .hero__title::before{
+        content:"Build The Community\A"
+            "Your Fans Will Love";
+        white-space: pre;
+    }
+    
+    .hero__p{
+        font-family: 'Open Sans',sans serif;
+        line-height: 1.6rem;
+    }
+
+    .hero__p::before{
+        content:"huddle re-imagines the way we build\A communities. You have "
+        "a voice, but so\A does your audience. Create connections\A with "
+        "your users as you engage in\A genuine discussion";
+        white-space:pre;
+    }
+    
+    .hero__register{
+        font-family: 'Open Sans', sans-serif;
+        border-radius: 2rem;
+        font-size:1rem;
+        padding:.7rem 4rem;
+        margin-left:3.2rem;
+        background-color: #fff;
+        color:hsl(257,40%,49%);
+        outline: none;
+        border:none;
+    }
+
+    .hero__icons-container{
+        text-align: center;
+    }
+
+    .hero__icons-container > a > *{
+        border: 1px solid #fff;
+        border-radius: 50%;
+        text-align: center;
+        padding:.4rem;
+        margin-top:3rem;
+        width:1.7rem;
+        color:#fff;
+        font-size:1rem;
+    }
+}
