@@ -7,7 +7,7 @@ body{
 
 
 .header{
-    background-image: url("/huddle/assets/bg-desktop.svg");
+    background-image: url("../assets/bg-desktop.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     /* background-color: red; */
@@ -112,7 +112,7 @@ body{
 
 @media screen and (max-width:450px){
     .header{
-        background-image: url("/huddle/assets/bg-mobile.svg");
+        background-image: url("../assets/bg-mobile.svg");
         background-size:contain;
         /* background-color: red; */
         width:100vw;
