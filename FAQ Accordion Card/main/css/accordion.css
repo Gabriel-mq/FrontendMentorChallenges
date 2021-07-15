@@ -1,0 +1,118 @@
+body {
+    background:linear-gradient(hsl(273,75%,66%),hsl(240,73%,65%));
+    background-repeat: no-repeat;
+    background-size:calc(100vw + 100vh);
+    display:grid;
+    grid-template-columns: 1440px;
+    grid-template-rows: 100vh;
+    align-items: center;
+    justify-items: center;
+    overflow:hidden;
+    font-size:12px;
+}
+
+.faq__container{
+    background-color: #fff;
+    width:1000px;
+    height:600px;
+    border-radius: 2rem;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 600px;
+}
+
+
+.faq__ilustration{
+    background-image: url("../assets/bg-pattern-desktop.svg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position-x: -510px;
+    background-position-y: -232px;
+    margin:0;
+    padding:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow: hidden;
+}
+
+.woman{
+    width:550px;
+    height:450px;
+    margin-right: 30%;
+}
+
+.box{
+    position:absolute;
+    width:230px;
+    left:110px;
+    top:44%;
+}
+
+dt, dd{
+    margin-block-start: 0px;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.faq__list{
+    font-family: 'Kumbh Sans';
+    color:hsl(237, 12%, 33%);
+    padding:4rem;
+}
+
+.faq__list > *:not(.faq__divider){
+    height:4rem;
+}
+
+.faq__divider{
+    background-color: hsl(240, 5%, 91%);
+}
+
+.faq__title{
+    color:hsl(238, 29%, 16%);
+    font-size:2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.faq__list-item{
+    font-size:1.1rem;
+    display: flex;
+    justify-content: space-between;
+    line-height: 2rem;
+}
+
+.faq__list-item:hover{
+    cursor:pointer;
+    color:hsl(14, 88%, 65%);
+}
+
+.faq__list-itemWg{
+    font-weight: 700;
+}
+
+.faq__arrow > img{
+    width:.9rem;
+    transform:rotate(0deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.faq__arrowDg > img {
+    transform:rotate(180deg);
+}
+
+.faq__list-description{
+    font-size:.9rem;
+    line-height: 1rem;
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.1s ease-in;
+}
+
+.faq__list-descriptionTg:not(.faq__divider){
+    height:30px;
+}
+
+
