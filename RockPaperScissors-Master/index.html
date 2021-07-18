@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/rps.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      color: rgb(228, 225, 225)
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="rps">
+    <div class="rps__header-container">
+      <header class="rps__header">
+        <img src="images/logo.svg" alt="logo" class="rps__logo">
+  
+        <div class="rps__score-container">
+          <p class="rps__score">SCORE<br><span class="rps__number">0</span></p>
+        </div>
+      </header>
+    </div>
+    <div class="rps__main-container">
+      <main class="rps__main">
+        <img src="images/bg-triangle.svg" alt="triangle" class="rps__triangle-bg">
+
+        <div class="rps__buttons">
+          <button class="rps__rock">
+            <div class="rps__rock-container"><img src="images/icon-rock.svg" alt="rock"></div>
+          </button>
+          <button class="rps__paper">
+            <div class="rps__paper-container"><img src="images/icon-paper.svg" alt="paper"></div>
+          </button>
+          <button class="rps__scissor">
+            <div class="rps__scissor-container"><img src="images/icon-scissors.svg" alt="scissor"></div>
+          </button>
+        </div>
+      </main>
+      <button class="rps__rules">RULES</button>
+    </div>
+
+    <div class="rps__modal-container">
+      <aside class="rps__modal">
+        <div class="rps__modal-main">
+          <h2 class="rps__modal-title">RULES</h2>
+          <img src="images/icon-close.svg" alt="close" class="rps__modal-close">
+        </div>
+        <img src="images/image-rules.svg" alt="rules" class="rps__modal-rules">
+      </aside>
+    </div>
+  </div>
+
+  <script src="js/index.js" type="module"></script>
+</body>
+
+</html>
