@@ -109,7 +109,8 @@ export default function dynRps(rock,paper,scissor){
 
             setTimeout(() => {
                 $computer.removeChild($cContPk);
-                randomCPk = Math.round(Math.random()*2)
+                randomCPk = Math.round(Math.random()*2);
+                console.log(randomCPk);
 
                 if(randomCPk === 0){
                     $cBtn = Object.assign(d.createElement("button"),{id:"rps__rBtn"});
