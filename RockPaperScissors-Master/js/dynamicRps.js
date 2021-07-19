@@ -31,9 +31,14 @@ let $pickedElC;
 let randomCPk;
 
     //Result
-let $resultCont,
+let $result,
+    $resultCont,
     $resultT,
     $resultBtn;
+
+    //ResultAnims
+let $win,
+    $lose;
 
     //Score
 let $score = d.querySelector(".rps__number"),
@@ -155,7 +160,7 @@ export default function dynRps(rock,paper,scissor){
                         $player.insertAdjacentElement("afterend",$resultCont);
                         $sNumber = $sNumber + 1;
                         $score.textContent = $sNumber;
-                        
+                        $result = "win";
                     }
                     if($pickedEl === "rock" && $pickedElC === "paper"){
                         $resultCont = Object.assign(d.createElement("div"),{id:"resultCont"});
@@ -166,6 +171,7 @@ export default function dynRps(rock,paper,scissor){
                         $player.insertAdjacentElement("afterend",$resultCont);
                         $sNumber = $sNumber - 1;
                         $score.textContent = $sNumber;
+                        $result = "lose";
                     }
                     if($pickedEl === "rock" && $pickedElC === "rock"){
                         $resultCont = Object.assign(d.createElement("div"),{id:"resultCont"});
@@ -174,6 +180,7 @@ export default function dynRps(rock,paper,scissor){
                         $resultCont.appendChild($resultT);
                         $resultCont.appendChild($resultBtn);
                         $player.insertAdjacentElement("afterend",$resultCont);
+                        $result = "tie";
                     }
 
                     //PAPER
@@ -186,6 +193,7 @@ export default function dynRps(rock,paper,scissor){
                         $player.insertAdjacentElement("afterend",$resultCont);
                         $sNumber = $sNumber + 1;
                         $score.textContent = $sNumber;
+                        $result = "win";
                     }
                     if($pickedEl === "paper" && $pickedElC === "scissors"){
                         $resultCont = Object.assign(d.createElement("div"),{id:"resultCont"});
@@ -196,6 +204,7 @@ export default function dynRps(rock,paper,scissor){
                         $player.insertAdjacentElement("afterend",$resultCont);
                         $sNumber = $sNumber - 1;
                         $score.textContent = $sNumber;
+                        $result = "lose";
                     }
                     if($pickedEl === "paper" && $pickedElC === "paper"){
                         $resultCont = Object.assign(d.createElement("div"),{id:"resultCont"});
@@ -204,6 +213,7 @@ export default function dynRps(rock,paper,scissor){
                         $resultCont.appendChild($resultT);
                         $resultCont.appendChild($resultBtn);
                         $player.insertAdjacentElement("afterend",$resultCont);
+                        $result = "tie";
                     }
 
                     //SCISSORS
@@ -216,6 +226,7 @@ export default function dynRps(rock,paper,scissor){
                         $player.insertAdjacentElement("afterend",$resultCont);
                         $sNumber = $sNumber + 1;
                         $score.textContent = $sNumber;
+                        $result = "win";
                     }
                     if($pickedEl === "scissors" && $pickedElC === "rock"){
                         $resultCont = Object.assign(d.createElement("div"),{id:"resultCont"});
@@ -226,6 +237,7 @@ export default function dynRps(rock,paper,scissor){
                         $player.insertAdjacentElement("afterend",$resultCont);
                         $sNumber = $sNumber - 1;
                         $score.textContent = $sNumber;
+                        $result = "lose";
                     }
                     if($pickedEl === "scissors" && $pickedElC === "scissors"){
                         $resultCont = Object.assign(d.createElement("div"),{id:"resultCont"});
@@ -234,7 +246,27 @@ export default function dynRps(rock,paper,scissor){
                         $resultCont.appendChild($resultT);
                         $resultCont.appendChild($resultBtn);
                         $player.insertAdjacentElement("afterend",$resultCont);
+                        $result = "tie";
                     }
+
+                    setTimeout(() => {
+                        $resultCont.id = "resultAnim";
+                        if($result === "win"){
+                            for (let i = 1; i <= 3; i++) {
+                                $win = d.createElement("div");
+                                $win.setAttribute("class",`resultAnim${i}`);
+                                $pBtn.appendChild($win);                          
+                            }
+                        }
+
+                        if($result === "lose"){
+                            for (let i = 1; i <= 3; i++) {
+                                $lose = d.createElement("div");
+                                $lose.setAttribute("class",`resultAnim${i}`);
+                                $cBtn.appendChild($lose);                          
+                            }
+                        }
+                    },100)
                 },1000)
             },1500);
 

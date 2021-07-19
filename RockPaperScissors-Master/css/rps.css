@@ -28,6 +28,7 @@ html,body{
 body{
     margin:0;
     background:var(--background);
+    overflow: hidden;
 }
 
 .rps{
@@ -43,7 +44,7 @@ body{
     width:100%;
     display:flex;
     justify-content: center;
-    margin:auto;
+    margin:.5rem;
 }
 
 .rps__header{
@@ -483,22 +484,32 @@ div > img{
 
 /*Result*/
 
+
 #resultCont{
-    min-width:230px;
-    width:10%;
-    height:43%;
+    width:0%;
+    height:185px;
+    overflow: hidden;
+}
+
+#resultAnim{
+    transition: width 0.5s ease-in-out;
+    width:230px;
+    height:185px;
+    overflow: hidden;
 }
 
 #resultT{
+    text-align: center;
     font-size:3.5rem;
     font-weight: 700;
+    width:230px;
     margin-bottom:-1rem;
     color:whitesmoke;
     text-shadow: 1px 1px 5px black;
 }
 
 #resultBtn{
-    width:100%;
+    width:230px;
     padding:1rem 0;
     font-size: 1rem;
     font-weight: 700;
@@ -510,4 +521,93 @@ div > img{
 
 #resultBtn:hover{
     color:hsl(349, 70%, 56%);
+}
+
+.resultAnim1{
+    position:absolute;
+    z-index:-1;
+    width:350px;
+    height:350px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,.1);
+    animation-name: anim1;
+    animation-iteration-count: 1;
+    animation-duration: .5s;
+}
+
+@keyframes anim1 {
+    0%{
+        width:0px;
+        height:0px;
+    }
+    50%{
+        width:175px;
+        height:175px;
+    }
+    100%{
+        width:350px;
+        height:350px;
+    }
+}
+
+.resultAnim2{
+    position:absolute;
+    z-index:-1;
+    width:450px;
+    height:450px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,.1);
+    animation-name: anim2;
+    animation-iteration-count: 1;
+    animation-duration: .5s;
+}
+
+@keyframes anim2 {
+    0%{
+        width:0px;
+        height:0px;
+    }
+    50%{
+        width:225px;
+        height:225px;
+    }
+    100%{
+        width:450px;
+        height:450px;
+    }
+}
+
+.resultAnim3{
+    position:absolute;
+    z-index:-1;
+    width:550px;
+    height:550px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,.1);
+    animation-name: anim3;
+    animation-iteration-count: 1;
+    animation-duration: .5s;
+}
+
+@keyframes anim3 {
+    0%{
+        width:0px;
+        height:0px;
+    }
+    50%{
+        width:275px;
+        height:275px;
+    }
+    100%{
+        width:550px;
+        height:550px;
+    }
+}
+
+
+/*Mobile*/
+
+
+@media screen and (min-width:) {
+    
 }
