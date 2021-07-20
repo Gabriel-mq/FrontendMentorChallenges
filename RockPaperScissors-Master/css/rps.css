@@ -737,7 +737,7 @@ div > img{
     
     .rps__scissor{
         position:absolute;
-        left:57.5%;
+        left:60%;
         top:-10%;
         width:125px;
         height:125px;
@@ -750,8 +750,7 @@ div > img{
     }
 
     .rps__rules-container{
-        height: 10vh;
-        margin-bottom: 1rem;
+        height: 12vh;
     }
     
     .rps__rules{
