@@ -751,6 +751,7 @@ div > img{
 
     .rps__rules-container{
         height: 10vh;
+        margin-bottom: 1rem;
     }
     
     .rps__rules{
