@@ -52,7 +52,7 @@ export default function dynRps(rock,paper,scissor){
             //Player
             $containerPnC = Object.assign(d.createElement("div"),{id:"rps__containerPnC"});
             $player = Object.assign(d.createElement("figure"),{id:"rps__picked"});
-            $pText = Object.assign(d.createElement("figcaption"),{innerHTML:"YOU PICKED <span class='rps__dynRock'>ROCK</span>",id:"rps__rText"});
+            $pText = Object.assign(d.createElement("figcaption"),{innerHTML:"YOU HAVE PICKED <span class='rps__dynRock'>ROCK</span>",id:"rps__rText"});
             $pBtn = Object.assign(d.createElement("button"),{id:"rps__rBtn"});
             $pCont = Object.assign(d.createElement("div"),{id:"rps__Cont"});
             $pImg = Object.assign(d.createElement("img"),{src:'images/icon-rock.svg',alt:"rock"});
@@ -71,7 +71,7 @@ export default function dynRps(rock,paper,scissor){
             //Player
             $containerPnC = Object.assign(d.createElement("div"),{id:"rps__containerPnC"});
             $player = Object.assign(d.createElement("figure"),{id:"rps__picked"});
-            $pText = Object.assign(d.createElement("figcaption"),{innerHTML:"YOU PICKED <span class='rps__dynPaper'>PAPER</span>",id:"rps__pText"});
+            $pText = Object.assign(d.createElement("figcaption"),{innerHTML:"YOU HAVE PICKED <span class='rps__dynPaper'>PAPER</span>",id:"rps__pText"});
             $pBtn = Object.assign(d.createElement("button"),{id:"rps__pBtn"});
             $pCont = Object.assign(d.createElement("div"),{id:"rps__Cont"});
             $pImg = Object.assign(d.createElement("img"),{src:'images/icon-paper.svg',alt:"paper"});
@@ -90,7 +90,7 @@ export default function dynRps(rock,paper,scissor){
             //Player
             $containerPnC = Object.assign(d.createElement("div"),{id:"rps__containerPnC"});
             $player = Object.assign(d.createElement("figure"),{id:"rps__picked"});
-            $pText = Object.assign(d.createElement("figcaption"),{innerHTML:"YOU PICKED <span class='rps__dynScissors'>SCISSORS</span>",id:"rps__sText"});
+            $pText = Object.assign(d.createElement("figcaption"),{innerHTML:"YOU HAVE PICKED <span class='rps__dynScissors'>SCISSORS</span>",id:"rps__sText"});
             $pBtn = Object.assign(d.createElement("button"),{id:"rps__sBtn"});
             $pCont = Object.assign(d.createElement("div"),{id:"rps__Cont"});
             $pImg = Object.assign(d.createElement("img"),{src:'images/icon-scissors.svg',alt:"scissor"});

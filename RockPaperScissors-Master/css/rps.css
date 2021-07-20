@@ -609,17 +609,15 @@ div > img{
 
 
 @media screen and (min-width:320px) and (max-width:450px){
-    body{
+    body,html{
         overflow: visible;
     }
 
     .rps{
-        margin:1.5rem 0;
+        padding:1rem;
         min-width: 320px;
-        max-height:900px;
-        width:100%;
-        height:100%;
-        background-color: royalblue;
+        min-height: 0;
+        overflow: hidden;
     }
     
     .rps__header-container{
@@ -631,13 +629,13 @@ div > img{
     
     .rps__header{
         align-items: center;
-        width:90%;
+        width:100%;
         height:125px;
         border-radius: .5rem;
         padding:.5rem 1rem;
         margin-bottom: 1.5rem;
     }
-
+    
     .rps__logo{
         width:100px;
     }
@@ -661,7 +659,7 @@ div > img{
     
     .rps__main-container{
         width:100%;
-        height:100%;
+        height:100vh;
         position: relative;
         justify-content: space-around;
         align-items: center;
@@ -670,15 +668,17 @@ div > img{
     
     .rps__main{
         width:100%;
-        height:250px;
+        height:50vh;
         margin-bottom:1rem;
+        margin-top:2rem;
     }
     
     .rps__triangle-bg{
         position:absolute;
-        width:150px;
-        height: 150px;
-        filter: drop-shadow(0px 0px 10px black);
+        width:60%;
+        min-height: 230px;
+        height: 60%;
+        filter: drop-shadow(0px 0px 8px black);
     }
     
     .rps__buttons{
@@ -689,14 +689,14 @@ div > img{
     
     .rps__buttons > * {
         border:none;
-        cursor:pointer;
+        cursor:default;
     }
     
     .rps__rock-container,.rps__paper-container,.rps__scissor-container {
         background-color: whitesmoke;
         border-top:8px solid hsl(217, 16%, 80%);
-        width:75px;
-        height:75px;
+        width:90px;
+        height:90px;
         border-radius: 50%;
         display:flex;
         justify-content: center;
@@ -704,13 +704,13 @@ div > img{
     }
     
     div > img{
-        width:35px;
+        width:40px;
     }
     
     .rps__rock{
         position:absolute;
-        left:17%;
-        top:55%;
+        left:28%;
+        top:50%;
         width:125px;
         height:125px;
         border-radius: 50%;
@@ -721,18 +721,10 @@ div > img{
         border-bottom: 10px solid hsl(349, 71%, 40%);
     }
     
-    .rps__rock:hover{
-        box-shadow:0 0 15px hsl(349, 71%, 52%);
-    }
-    
-    .rps__rock:hover img{
-        filter: invert(28%) sepia(57%) saturate(2212%) hue-rotate(323deg) brightness(94%) contrast(101%);
-    }
-    
     .rps__paper{
         position:absolute;
-        left:-27.5%;
-        top:-25%;
+        left:0%;
+        top:-10%;
         width:125px;
         height:125px;
         border-radius: 50%;
@@ -743,18 +735,10 @@ div > img{
         border-bottom:10px solid hsl(229, 64%, 46%);
     }
     
-    .rps__paper:hover{
-        box-shadow:0 0 15px hsl(230, 89%, 62%);
-    }
-    
-    .rps__paper:hover img{
-        filter: invert(22%) sepia(68%) saturate(2566%) hue-rotate(214deg) brightness(94%) contrast(83%);
-    }
-    
     .rps__scissor{
         position:absolute;
-        left:60%;
-        top:-25%;
+        left:57.5%;
+        top:-10%;
         width:125px;
         height:125px;
         border-radius: 50%;
@@ -764,13 +748,10 @@ div > img{
         align-items: center;
         border-bottom:10px solid hsl(39, 90%, 34%);
     }
-    
-    .rps__scissor:hover{
-        box-shadow:0 0 15px hsl(39, 89%, 49%);
-    }
-    
-    .rps__scissor:hover img{
-        filter: invert(65%) sepia(48%) saturate(1260%) hue-rotate(357deg) brightness(96%) contrast(92%);
+
+    .rps__rules-container{
+        height: 10vh;
+        margin-top: 1.3rem;
     }
     
     .rps__rules{
@@ -783,7 +764,7 @@ div > img{
         border: 2px solid hsl(217, 16%, 45%);
         border-radius: .5rem;
         position: static;
-        cursor: pointer;
+        cursor: default;
     }
     
     .rps__rules:hover{
@@ -796,13 +777,10 @@ div > img{
     
     .rps__modal-container{
         position: fixed;
-        background-color: hsla(0,100%,0%,.5);
-        width:100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity:0;
+        min-width: 150px;
+        min-height: 350px;
+        height:100vh;
+        width:90vw;
         visibility: hidden;
         transition:opacity .5s ease-in-out, visibility .5s ease-in-out;
     }
@@ -813,40 +791,41 @@ div > img{
     }
     
     .rps__modal{
-        /* display:none; */
         position:absolute;
         background-color:rgb(235, 230, 230);
-        width: 200px;
-        height: 150px;
+        width: 100vw;
+        height: 100vh;
         border-radius: .5rem;
         padding:0 2rem;
-        margin-top:2rem;
+        margin-top:-2rem;
     }
     
     .rps__modal-main{
         display:flex;
+        flex-direction: column-reverse;
         justify-content: space-between;
-        align-items: center;
+        width: 106%;
+        padding-top: 1rem;
     }
     
     .rps__modal-title{
-        font-size:1rem;
+        align-self: center;
+        font-size:1.8rem;
         color:var(--darkText);
     }
     
     .rps__modal-close{
+        align-self: flex-end;
         width:1.3rem;
         height:1.3rem;
-        cursor: pointer;
-    }
-    
-    .rps__modal-close:hover{
+        cursor: default;
         filter: invert(28%) sepia(57%) saturate(2212%) hue-rotate(323deg) brightness(94%) contrast(150%);
     }
     
     .rps__modal-rules{
+        margin-top:3rem;
         width:100%;
-        height:70%;
+        height:50%;
     }
     
     
@@ -858,16 +837,13 @@ div > img{
     }
     
     #rps__containerPnC{
-        position:absolute;
-        width:80%;
+        width:100%;
         height:100%;
-        display:flex;
-        justify-content:center;
-        align-items: center;
+        display: flex;
+        align-items: flex-start;
     }
     
     #rps__containerPnC > *{
-        display:flex;
         justify-content:space-between;
         align-items:center;
         flex-direction: column;
@@ -875,16 +851,18 @@ div > img{
     
     #rps__picked{
         position:relative;
-        width:26%;
-        height:75%;
+        max-height: 200px;
+        width:100%;
+        height:45%;
         text-align: center;
+        margin:0;
     }
     
     #rps__Cont{
         background-color: whitesmoke;
         border-top:8px solid hsl(217, 16%, 80%);
-        width:190px;
-        height:190px;
+        width:100px;
+        height:100px;
         border-radius: 50%;
         display:flex;
         justify-content: center;
@@ -892,7 +870,7 @@ div > img{
     }
     
     #rps__Cont > img {
-        width:80px;
+        width:50px;
     }
     
     
@@ -900,23 +878,19 @@ div > img{
     
     
     #rps__rText{
-        font-size:1.3rem;
+        font-size:1rem;
         color:whitesmoke;
         letter-spacing: .1rem;
     }
     
-    .rps__dynRock{
-        color:hsl(349, 71%, 52%);
-    }
-    
     #rps__rBtn {
         border:none;
-        cursor:pointer;
+        cursor:default;
     }
     
     #rps__rBtn{
-        width:250px;
-        height:250px;
+        width:130px;
+        height:130px;
         border-radius: 50%;
         background:var(--rock-gd);
         display:flex;
@@ -925,36 +899,24 @@ div > img{
         border-bottom: 10px solid hsl(349, 71%, 40%);
     }
     
-    #rps__rBtn:hover{
-        box-shadow:0 0 15px hsl(349, 71%, 52%);
-    }
-    
-    #rps__rBtn:hover img{
-        filter: invert(28%) sepia(57%) saturate(2212%) hue-rotate(323deg) brightness(94%) contrast(101%);
-    }
-    
     
     /*PAPER*/
     
     
     #rps__pText{
-        font-size:1.3rem;
+        font-size:1rem;
         color:whitesmoke;
         letter-spacing: .1rem;
     }
     
-    .rps__dynPaper{
-        color:hsl(230, 89%, 62%);
-    }
-    
     #rps__pBtn {
         border:none;
-        cursor:pointer;
+        cursor:default;
     }
     
     #rps__pBtn{
-        width:250px;
-        height:250px;
+        width:130px;
+        height:130px;
         border-radius: 50%;
         background:var(--paper-gd);
         display:flex;
@@ -963,36 +925,24 @@ div > img{
         border-bottom:10px solid hsl(229, 64%, 46%);
     }
     
-    #rps__pBtn:hover{
-        box-shadow:0 0 15px hsl(230, 89%, 62%);
-    }
-    
-    #rps__pBtn:hover img{
-        filter: invert(22%) sepia(68%) saturate(2566%) hue-rotate(214deg) brightness(94%) contrast(83%);
-    }
-    
     
     /*SCISSORS*/
     
     
     #rps__sText{
-        font-size:1.3rem;
+        font-size:1rem;
         color:whitesmoke;
         letter-spacing: .1rem;
     }
-    
-    .rps__dynScissors{
-        color:hsl(39, 89%, 49%);
-    }
-    
+
     #rps__sBtn {
         border:none;
-        cursor:pointer;
+        cursor:default;
     }
     
     #rps__sBtn{
-        width:250px;
-        height:250px;
+        width:130px;
+        height:130px;
         border-radius: 50%;
         background:var(--scissor-gd);
         display:flex;
@@ -1001,35 +951,29 @@ div > img{
         border-bottom:10px solid hsl(39, 90%, 34%);
     }
     
-    #rps__sBtn:hover{
-        box-shadow:0 0 15px hsl(39, 89%, 49%);
-    }
-    
-    #rps__sBtn:hover img{
-        filter: invert(65%) sepia(48%) saturate(1260%) hue-rotate(357deg) brightness(96%) contrast(92%);
-    }
-    
     
     /*COMPUTER BASIC STYLES*/
     
     
     #rps__computer{
         position:relative;
-        width:26%;
-        height:75%;
+        max-height: 200px;
+        width:100%;
+        height:45%;
+        margin:0;
         text-align: center;
     }
     
     #rps__ContPk{
         background-color: rgba(0, 0, 0, .2);
-        width:190px;
-        height:190px;
+        width:100px;
+        height:100px;
         border-radius: 50%;
         margin-bottom: 2rem;
     }
     
     #rps__cText{
-        font-size:1.3rem;
+        font-size:1rem;
         color:whitesmoke;
         letter-spacing: .1rem;
     }
@@ -1069,7 +1013,10 @@ div > img{
         transition: width 0.5s ease-in-out;
         width:230px;
         height:185px;
+        position: absolute;
+        top:35%;
         overflow: hidden;
+        cursor: default;
     }
     
     #resultT{
@@ -1093,15 +1040,11 @@ div > img{
         cursor:pointer;
     }
     
-    #resultBtn:hover{
-        color:hsl(349, 70%, 56%);
-    }
-    
     .resultAnim1{
         position:absolute;
         z-index:-1;
-        width:350px;
-        height:350px;
+        width:180px;
+        height:180px;
         border-radius: 50%;
         background-color: rgba(255,255,255,.1);
         animation-name: anim1;
@@ -1115,20 +1058,20 @@ div > img{
             height:0px;
         }
         50%{
-            width:175px;
-            height:175px;
+            width:80px;
+            height:80px;
         }
         100%{
-            width:350px;
-            height:350px;
+            width:180px;
+            height:180px;
         }
     }
     
     .resultAnim2{
         position:absolute;
         z-index:-1;
-        width:450px;
-        height:450px;
+        width:240px;
+        height:240px;
         border-radius: 50%;
         background-color: rgba(255,255,255,.1);
         animation-name: anim2;
@@ -1142,20 +1085,20 @@ div > img{
             height:0px;
         }
         50%{
-            width:225px;
-            height:225px;
+            width:120px;
+            height:120px;
         }
         100%{
-            width:450px;
-            height:450px;
+            width:240px;
+            height:240px;
         }
     }
     
     .resultAnim3{
         position:absolute;
         z-index:-1;
-        width:550px;
-        height:550px;
+        width:300px;
+        height:300px;
         border-radius: 50%;
         background-color: rgba(255,255,255,.1);
         animation-name: anim3;
@@ -1169,12 +1112,12 @@ div > img{
             height:0px;
         }
         50%{
-            width:275px;
-            height:275px;
+            width:150px;
+            height:150px;
         }
         100%{
-            width:550px;
-            height:550px;
+            width:300px;
+            height:300px;
         }
     }
 }
